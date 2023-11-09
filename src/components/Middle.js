@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { collection, deleteDoc, doc, getDocs, setDoc, getDoc } from 'firebase/firestore';
 import { auth, database } from '../firebase/Setup';
 import star from "../images/star.png";
-import refresh from "../images/refresh.png";
 import remove from "../images/bin.png";
 import yellow from "../images/yellow.png";
 import snooze from "../images/snooze.png";
@@ -14,6 +13,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+import Emailtype from './Emailtype';
+import RefreshIcon from '@mui/icons-material/Refresh';
+//import EmailListSetting from './EmailListSetting';
+import CheckBox from '@mui/icons-material/CheckBox';
 function Middle(props) {
 
   const [mailData, setMailData] = useState([]);
@@ -110,9 +113,27 @@ function Middle(props) {
     setSelectedEmail(null);
   }
 
+  
   useEffect(() => {
-    getMail(props.subCollect ? props.subCollect : "Inbox");
+    const fetchData = async () => {
+      try {
+        await getMail(props.subCollect ? props.subCollect : "Inbox");
+      } catch (error) {
+        console.error("Error fetching emails:", error);
+      }
+    };
+
+    fetchData(); // Fetch data when the component mounts
+
+    const interval = setInterval(() => {
+      // Fetch data at regular intervals (adjust the interval time as needed)
+      fetchData();
+    }, 500); // Fetch data every 60 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [props.subCollect]);
+
+
 
   return (
     <div style={{ marginLeft: "2.9vw", width: '75vw' }}>
@@ -135,12 +156,17 @@ function Middle(props) {
         
       ) : (
         <>
-        <img src={refresh} style={{ width: "1.5vw", height: "1.5vw", marginLeft: "1.5vw", marginTop: "2vw" }} onClick={refreshEmails} />
+        <div style={{display:'flex'}}>
+        <RefreshIcon style={{ cursor: 'pointer', fontSize:"1.3vw", marginLeft:"1.8vw", marginBottom:"0.3vw", marginTop:"1vw" }} onClick={refreshEmails}/>
+        </div> 
+        <Emailtype />
           {props.search ? mailData.filter((data) => data.sender === props.search).map((data) => (
             <div key={data.id} onClick={() => handleEmailClick(data)}>
               <Paper onMouseEnter={() => setShowEmailDetail(true)} onMouseLeave={() => setShowEmailDetail(false)} elevation={0} style={{ backgroundColor: "#F8FCFF", borderBottom: "1px solid #EFEFEF", borderTop: "1px solid #EFEFEF" }}>
                 <ListItem>
+                
                   {data.starred ? <img src={yellow} style={{ cursor: "pointer", width: "1.4vw", height: "1.4vw" }} />
+                  
                     : <img onClick={() => starred(data)} src={star} style={{ cursor: "pointer", width: "1.4vw", height: "1.4vw" }} />}
                   <span style={{ fontSize: "1.3vw", marginLeft: "1.2vw", fontWeight: "500" }}>{data.sender}<span style={{ marginLeft: "12vw", fontWeight: "200", marginLeft: "1vw", cursor: "pointer" }}>{data.email}</span></span>
                   {showEmailDetail && <img onClick={() => snoozed(data)} src={snooze} style={{ margin: '0 0.5vw', width: "1.3vw", height: "1.3vw", cursor: "pointer" }} />}

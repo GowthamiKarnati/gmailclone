@@ -3,7 +3,7 @@
 // import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 // import Modal from '@mui/material/Modal';
-// import pen from "../images/pen.png"
+// import pen from "../images/pen.png";
 // import { TextField } from '@mui/material';
 // import { addDoc, collection, doc } from 'firebase/firestore';
 // import { auth, database } from '../firebase/Setup';
@@ -25,49 +25,56 @@
 //   const handleOpen = () => setOpen(true);
 //   const handleClose = () => setOpen(false);
 
-//   const [mailId, setMailId] = React.useState("")
-//   const [message, setMessage] = React.useState("")
-
+//   const [mailId, setMailId] = React.useState("");
+//   const [message, setMessage] = React.useState("");
+//   const [subject, setSubject] = React.useState("");
 //   const send = async () => {
-//     const userDoc = doc(database, "Users", `${auth.currentUser?.email}`)
-//     const messageRef = collection(userDoc, "Send")
+//     const userDoc = doc(database, "Users", `${auth.currentUser?.email}`);
+//     const messageRef = collection(userDoc, "Send");
 //     try {
 //       await addDoc(messageRef, {
-//         email: message
-//       })
+//         email: message,
+//         sender: auth.currentUser?.displayName,
+//         subject: subject,
+//       });
 //     } catch (err) {
-//       console.error(err)
+//       console.error(err);
 //     }
 //   }
 
 //   const inbox = async () => {
-//     const userDoc = doc(database, "Users", `${mailId}`)
-//     const messageRef = collection(userDoc, "Inbox")
+//     const userDoc = doc(database, "Users", `${mailId}`);
+//     const messageRef = collection(userDoc, "Inbox");
 //     try {
 //       await addDoc(messageRef, {
 //         email: message,
+//         subject: subject,
 //         sender: auth.currentUser?.displayName
-//       })
-//       send()
-//       window.location.href = '/main';
+//       });
+//       await send();
+//       window.location.href = '/main'; // Assuming '/main' is the route to navigate back to the Inbox
 //     } catch (err) {
-//       console.error(err)
+//       console.error(err);
 //     }
 //   }
 
 //   return (
 //     <div>
 //       <div onClick={handleOpen} style={{
-//         cursor: 'pointer', height: "4.5vw", marginLeft: "1vw",
-//         width: "12vw", display: "flex", alignItems: "center",
+//         cursor: 'pointer', height: "3vw", marginLeft: "1vw", marginTop:"1.2vw",marginBottom:"1.2vw",
+//         width: "11vw", display: "flex", alignItems: "center",
 //         borderRadius: "20px", backgroundColor: "#BEE0FF"
 //       }}>
 //         <img src={pen} style={{ width: "1.2vw", marginLeft: "2vw" }} />
-//         <h4 style={{ marginLeft: "1.6vw", fontWeight: "400", fontSize: '1.3vw' }}>Compose</h4>
+//         <h4 style={{ marginLeft: "1vw", fontWeight: "400", fontSize: '1.3vw' }}>Compose</h4>
 //       </div>
 //       <Modal
 //         open={open}
-//         onClose={handleClose}
+//         onClose={() => {
+//           handleClose();
+//           // Add code here to refresh Inbox messages
+//           // For example, call a function to refresh the messages
+//         }}
 //         aria-labelledby="modal-modal-title"
 //         aria-describedby="modal-modal-description"
 //       >
@@ -80,7 +87,7 @@
 //           </Typography>
 //           <TextField onChange={(e) => setMailId(e.target.value)} variant='standard' label="To" sx={{ width: "39vw", marginTop: "1vw" }} />
 //           <br />
-//           <TextField variant='standard' label="Subject" sx={{ width: "39vw" }} />
+//           <TextField onChange={(e) => setSubject(e.target.value)} variant='standard' label="Subject" sx={{ width: "39vw" }} />
 //           <br />
 //           <TextField onChange={(e) => setMessage(e.target.value)} multiline rows={12} sx={{ width: "39vw", "& fieldset": { border: "none" } }} />
 //           <br />
@@ -93,7 +100,7 @@
 //     </div>
 //   );
 // }
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -152,7 +159,7 @@ export default function Message() {
       console.error(err);
     }
   }
-
+  
   return (
     <div>
       <div onClick={handleOpen} style={{

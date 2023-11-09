@@ -1,0 +1,16 @@
+import React, { useState } from 'react';
+import Message from './Message';
+import Middle from './Middle';
+
+function ParentComponent() {
+  const [subject, setSubject] = useState('');
+
+  return (
+    <div>
+      <Message setSubject={setSubject} />
+      <Middle subject={subject} />
+    </div>
+  );
+}
+
+export default ParentComponent;

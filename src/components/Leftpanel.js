@@ -1,3 +1,4 @@
+
 // import React, { useState } from 'react';
 // import inbox from "../images/inbox.png";
 // import send from "../images/send.png";
@@ -10,18 +11,16 @@
 //   const [selectedSection, setSelectedSection] = useState("Inbox");
 //   const [selectedOption, setSelectedOption] = useState(null);
 
-  
-
 //   const handleSectionClick = (section) => {
 //     setSelectedSection(section);
 //     props.setSubCollect(section);
 //   };
+
 //   const handleMoreOptionClick = (option) => {
 //     // Handle the click on each More option (e.g., Spam, Bin, Category)
 //     console.log(`Clicked on ${option}`);
 //     setSelectedOption(option);
 //   };
-//   ;
   
 //   const getSectionStyle = (sectionName) => {
 //     return {
@@ -129,7 +128,6 @@
 //         >
 //           Send
 //         </span>
-        
 //       </div>  
 //       <div
 //         style={{
@@ -146,6 +144,8 @@
 //             fontSize: "1.1vw",
 //             cursor: "pointer",
 //             marginLeft: "2vw",
+//             width: "100%",
+//             border: 'none', // Adjusted width to match other sections
 //           }}
 //           onChange={(e) => handleMoreOptionClick(e.target.value)}
 //           value={selectedOption || "More"}
@@ -159,21 +159,18 @@
 //           <option value="Trash">Trash</option>
 //         </select>
 //       </div>
-      
 //     </div>
-    
 //   );
 // }
 
 // export default Leftpanel;
-
 import React, { useState } from 'react';
-import inbox from "../images/inbox.png";
-import send from "../images/send.png";
-import snooze from "../images/snooze.png";
-import star from "../images/star.png";
-import pen from "../images/pen.png";
 import Message from './Message';
+import InboxIcon from '@mui/icons-material/Inbox';
+import StarIcon from '@mui/icons-material/Star';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import SendIcon from '@mui/icons-material/Send';
+
 
 function Leftpanel(props) {
   const [selectedSection, setSelectedSection] = useState("Inbox");
@@ -185,7 +182,6 @@ function Leftpanel(props) {
   };
 
   const handleMoreOptionClick = (option) => {
-    // Handle the click on each More option (e.g., Spam, Bin, Category)
     console.log(`Clicked on ${option}`);
     setSelectedOption(option);
   };
@@ -216,13 +212,13 @@ function Leftpanel(props) {
         }}
         onClick={() => handleSectionClick("Inbox")}
       >
-        <img src={inbox} style={{ width: "1.1vw", marginLeft: "2vw" }} />
+        <InboxIcon style={{ width: "1.1vw", marginLeft: "2vw" }} />
         <span
           style={{
             cursor: "pointer",
             marginLeft: "1.6vw",
             fontWeight: "400",
-            fontSize: '1.1vw' // Adjusted font size
+            fontSize: '1.1vw'
           }}
         >
           Inbox
@@ -239,13 +235,13 @@ function Leftpanel(props) {
         }}
         onClick={() => handleSectionClick("Starred")}
       >
-        <img src={star} style={{ width: "1.1vw", marginLeft: "2vw" }} />
+        <StarIcon style={{ width: "1.1vw", marginLeft: "2vw" }} />
         <span
           style={{
             cursor: "pointer",
             marginLeft: "1.6vw",
             fontWeight: "400",
-            fontSize: '1.1vw' // Adjusted font size
+            fontSize: '1.1vw'
           }}
         >
           Starred
@@ -262,13 +258,13 @@ function Leftpanel(props) {
         }}
         onClick={() => handleSectionClick("Snoozed")}
       >
-        <img src={snooze} style={{ width: "1.1vw", marginLeft: "2vw" }} />
+        <ScheduleIcon style={{ width: "1.1vw", marginLeft: "2vw" }} />
         <span
           style={{
             cursor: "pointer",
             marginLeft: "1.6vw",
             fontWeight: "400",
-            fontSize: '1.1vw' // Adjusted font size
+            fontSize: '1.1vw'
           }}
         >
           Snoozed
@@ -285,13 +281,13 @@ function Leftpanel(props) {
         }}
         onClick={() => handleSectionClick("Send")}
       >
-        <img src={send} style={{ width: "1.1vw", marginLeft: "2vw" }} />
+        <SendIcon style={{ width: "1.1vw", marginLeft: "2vw" }} />
         <span
           style={{
             cursor: "pointer",
             marginLeft: "1.6vw",
             fontWeight: "400",
-            fontSize: '1.1vw' // Adjusted font size
+            fontSize: '1.1vw'
           }}
         >
           Send

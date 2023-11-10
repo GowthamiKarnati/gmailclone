@@ -19,7 +19,8 @@
   import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
   import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
   import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-
+  import StarIcon from '@mui/icons-material/Star';
+  import StarBorderIcon from '@mui/icons-material/StarBorder';
   function Middle(props) {
 
     const [mailData, setMailData] = useState([]);
@@ -217,8 +218,8 @@
                       : <img onClick={() => starred(data)} src={star} style={{ cursor: "pointer", width: "1.4vw", height: "1.4vw" }} />}
                     <span style={{ fontSize: "1.3vw", marginLeft: "1.2vw", fontWeight: "500" }}>{data.sender}
                     </span>
-                    {showEmailDetail && <img onClick={() => snoozed(data)} src={snooze} style={{ margin: '0 0.5vw', width: "1.3vw", height: "1.3vw", cursor: "pointer" }} />}
-                    {showEmailDetail && <img onClick={() => deleteMail(data)} style={{ width: "1.1vw", height: "1.1vw", cursor: "pointer" }} />}
+                    {showEmailDetail && <AccessTimeIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => snoozed(data)} />}
+                      {showEmailDetail && <DeleteIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => deleteMail(data)} />}
                   </ListItem>
                 </Paper>
               </div>
@@ -230,12 +231,30 @@
                   onClick={handleCheckboxClick}
                   checked={isChecked}
                   />
-                    {data.starred ? <img src={yellow} style={{ cursor: "pointer", width: "0.8vw", height: "0.8vw", }} />
-                      : <img onClick={() => starred(data)} src={star} style={{ cursor: "pointer", width: "0.9vw", height: "0.9vw" }} />}
+                    {data.starred ? (
+                    <StarIcon
+                      style={{
+                        cursor: "pointer",
+                        fontSize: "1.3vw",
+                        marginRight: "1.2vw",
+                        color: "#FFD700",
+                      }}
+                      onClick={() => starred(data)}
+                    />
+                  ) : (
+                    <StarBorderIcon
+                      style={{
+                        cursor: "pointer",
+                        fontSize: "1.3vw",
+                        marginRight: "1.2vw",
+                      }}
+                      onClick={() => starred(data)}
+                    />
+                  )}
                     <span style={{ fontSize: "0.8vw", marginLeft: "1.2vw", fontWeight: "500" , cursor: "pointer", fontSize:"20"}} onClick={() => handleEmailClick(data)}>{data.sender}<span style={{ fontSize:"0.8vw",marginLeft: "5vw", fontWeight: "500", cursor: "pointer", fontSize:"18" }} onClick={() => handleEmailClick(data)}>{data.subject}</span><span style={{ marginLeft: "2vw", fontWeight: "300", cursor: "pointer", fontSize:"8" }} onClick={() => handleEmailClick(data)}>{data.email.substring(0, 50)}....</span></span>
                     <div style={{ position: 'absolute', right: '0', top: '0' }}>
-                      {showEmailDetail && <img onClick={() => snoozed(data)} src={snooze} style={{ margin: '0 0.5vw', width: "1.3vw", height: "1.3vw", cursor: "pointer", marginRight: "20px" }} />}
-                      {showEmailDetail && <img onClick={() => deleteMail(data)} src={remove} style={{ width: "1.1vw", height: "1.1vw", cursor: "pointer", marginRight: "30px" }} />}
+                      {showEmailDetail && <AccessTimeIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => snoozed(data)} />}
+                      {showEmailDetail && <DeleteIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => deleteMail(data)} />}
                     </div>
                   </ListItem>
                 </Paper>

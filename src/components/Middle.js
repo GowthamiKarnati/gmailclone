@@ -92,9 +92,9 @@
     const snoozed = async (data) => {
       const userDoc = doc(database, "Users", `${auth.currentUser?.email}`);
       const messageDoc = doc(userDoc, "Snoozed", `${data.id}`);
-      const snoozeDoc = doc(userDoc, "Inbox", `${data.id}`);
+      
       try {
-        await deleteDoc(snoozeDoc);
+        
         await setDoc(messageDoc, {
           email: data.email,
           sender: data.sender,

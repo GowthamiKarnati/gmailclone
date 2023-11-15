@@ -18,15 +18,16 @@ function Emailtype() {
             <InboxIcon />
             <p>Primary</p>
         </div>
-        <div className={`emailtype__options ${activeOption === 'Social' ? 'emailtype__options--active' : ''}`}
-        onClick={() => handleOptionClick('Social')}>
-            <PeopleIcon />
-            <p>Social</p>
-        </div>
+        
         <div className={`emailtype__options ${activeOption === 'Promotions' ? 'emailtype__options--active' : ''}`}
         onClick={() => handleOptionClick('Promotions')}>
             <LocalOfferIcon />
             <p>Promotions</p>
+        </div>
+        <div className={`emailtype__options ${activeOption === 'Social' ? 'emailtype__options--active' : ''}`}
+        onClick={() => handleOptionClick('Social')}>
+            <PeopleIcon />
+            <p>Social</p>
         </div>
     </div>
   )

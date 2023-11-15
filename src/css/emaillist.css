@@ -12,7 +12,7 @@
 }
 
 .emaillist__settings svg{
-    font-size: 18px;
+    font-size: 1.8vw;
 }
 
 .emaillist__settingsRight{
@@ -21,7 +21,7 @@
 }
 
 .emaillist__settingsRight p{
-    font-size: 13px;
+    font-size: 1.3vw;
 }
 
 .emailtype {
@@ -40,13 +40,13 @@
 }
 
 .emailtype > .emailtype__options svg {
-    font-size: 20px;
+    font-size: 1vw;
     color: gray;
-    margin-right: 10px;
+    margin-right: 1.0px;
 }
 
 .emailtype > .emailtype__options p {
-    font-size: 15px;
+    font-size: 1.5vw;
 }
 
 .emailtype > .emailtype__options:hover {
@@ -83,13 +83,13 @@
 }
 
 .emailbody .emailbody__left svg{
-    font-size: 18px;
+    font-size: 1.8vw;
     color: gray;
     margin-right: 15px;
 }
 
 .emailbody .emailbody__left h4{
-    font-size: 14px;
+    font-size: 1.4vw;
 }
 
 
@@ -105,7 +105,7 @@
 }
 
 .emailbody .emailbody__middle p{
-    font-size: 14px;
+    font-size: 1.4vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -121,7 +121,7 @@
 }
 
 .emailbody .emailbody__right p{
-    font-size: 12px;
+    font-size: 1.2vw;
 }
 
 .emailbodyselected {
@@ -146,13 +146,13 @@
 }
 
 .emailbodyselected .emailbody__left svg{
-    font-size: 18px;
+    font-size: 1.8vw;
     color: gray;
     margin-right: 15px;
 }
 
 .emailemailbodyselectedbody .emailbody__left h4{
-    font-size: 14px;
+    font-size: 1.4px;
 }
 
 
@@ -168,7 +168,7 @@
 }
 
 .emailbodyselected .emailbody__middle p{
-    font-size: 14px;
+    font-size: 1.4vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -184,7 +184,7 @@
 }
 
 .emailbodyselected .emailbody__right p{
-    font-size: 12px;
+    font-size: 1.2vw;
 }
 
 /* .emailbody__timehide-time {
@@ -199,7 +199,7 @@
 }
 
 .actions svg{
-    font-size: 18px;
+    font-size: 1.8vw;
     color: gray;
     margin-left: 15px;
 }
@@ -218,7 +218,7 @@
 }
 
 .emaildetails__header svg {
-    font-size: 18px;
+    font-size: 1.8vw;
 }
 
 .emaildetails__middleheader {
@@ -239,19 +239,19 @@
 }
 
 .emaildetails__middleheader svg {
-    font-size: 18px;
+    font-size: 1.8vw;
 }
 
 .emaildetails__middleheaderLeft h4 {
-    margin-right: 10px;
+    margin-right: 1.0vw;
 }
 
 .emaildetails__middleheaderLeft p{
-    font-size: 14px;
+    font-size: 1.4vw;
 }
 
 .emaildetails__middleheaderRight p{
-    font-size: 14px;
+    font-size: 1.4vw;
 }
 
 .emaildetails__body {
@@ -262,4 +262,11 @@
 .emaildetails__message {
     box-shadow: 0px 0px 3px #ccc;
     height: 100%;
+}
+.emailtype > .emailtype__options svg,
+.emailtype > .emailtype__options p {
+    font-size: 1.2vw; /* Adjust the font size as needed */
+}
+.emailtype > .emailtype__options svg {
+    margin-right: 1vw; /* Adjust the margin to add space between icon and text */
 }

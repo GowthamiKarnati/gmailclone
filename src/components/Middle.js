@@ -21,6 +21,7 @@
   import ChevronRightIcon from '@mui/icons-material/ChevronRight';
   import StarIcon from '@mui/icons-material/Star';
   import StarBorderIcon from '@mui/icons-material/StarBorder';
+  import { styles } from './styles';
   function Middle(props) {
 
     const [mailData, setMailData] = useState([]);
@@ -170,14 +171,7 @@
           
         ) : (
           <>
-          {/* <div style={{display:'flex'}}>
-          <CheckBoxOutlineBlankIcon style={{cursor: 'pointer',fontSize: '1.3vw',marginLeft: '1.8vw',marginBottom: '0.3vw', marginTop: '1vw',}}/>
-          <RefreshIcon style={{ cursor: 'pointer', fontSize:"1.3vw", marginLeft:"1.8vw", marginBottom:"0.3vw", marginTop:"1vw" }} onClick={refreshEmails}/>
-          <MoreVertIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={handleMoreVertClick} />
-          <p style={{ marginLeft: 'auto', marginRight: '1.8vw', fontSize: '0.8vw', fontWeight: 'normal' }}>1-50 of 1,432</p>
-          <ChevronLeftIcon style={{ marginLeft: '1vw', marginRight: '1.8vw', fontSize: '1.2vw', fontWeight: 'normal', marginTop:'0.8vw' }}/>
-          <ChevronRightIcon style={{ marginLeft: '0.3vw', marginRight: '1.8vw', fontSize: '1.2vw', fontWeight: 'normal', marginTop:'0.8vw' }}/>
-          </div>  */}
+          
           <div style={{ display: 'flex' }}>
         <CheckBoxOutlineBlankIcon
           style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }}
@@ -205,7 +199,7 @@
           <ChevronRightIcon style={{ marginLeft: '0.3vw', marginRight: '1.8vw', fontSize: '1.2vw', fontWeight: 'normal', marginTop:'0.8vw',marginTop:"1.2vw" }}/>
         </>
       )}
-        {/* ... (existing code) */}
+        
       </div>
           <Emailtype />
             {props.search ? mailData.filter((data) => data.sender === props.search).map((data) => (
@@ -251,7 +245,7 @@
                       onClick={() => starred(data)}
                     />
                   )}
-                    <span style={{ fontSize: "0.8vw", marginLeft: "1.2vw", fontWeight: "500" , cursor: "pointer", fontSize:"20"}} onClick={() => handleEmailClick(data)}>{data.sender}<span style={{ fontSize:"0.8vw",marginLeft: "5vw", fontWeight: "500", cursor: "pointer", fontSize:"18" }} onClick={() => handleEmailClick(data)}>{data.subject}</span><span style={{ marginLeft: "2vw", fontWeight: "300", cursor: "pointer", fontSize:"8" }} onClick={() => handleEmailClick(data)}>{data.email.substring(0, 50)}....</span></span>
+                    <span style={{ fontSize: "0.8vw", marginLeft: "1.2vw", fontWeight: "500" , cursor: "pointer", fontSize:"1vw"}} onClick={() => handleEmailClick(data)}>{data.sender}<span style={{ fontSize:"0.8vw",marginLeft: "5vw", fontWeight: "500", cursor: "pointer", fontSize:"18" }} onClick={() => handleEmailClick(data)}>{data.subject}</span><span style={{ marginLeft: "2vw", fontWeight: "300", cursor: "pointer", fontSize:"8" }} onClick={() => handleEmailClick(data)}>{data.email.substring(0, 50)}....</span></span>
                     <div style={{ position: 'absolute', right: '0', top: '0' }}>
                       {showEmailDetail && <AccessTimeIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => snoozed(data)} />}
                       {showEmailDetail && <DeleteIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginBottom: '0.3vw', marginTop: '1vw' }} onClick={() => deleteMail(data)} />}

@@ -33,15 +33,15 @@ export default function Navbar(props) {
               <div style={{ marginLeft: "3vw", display: "flex", alignItems: "center", borderRadius: "40px", backgroundColor: "#E4EFFA", width: "55vw", height: "3.7vw" }}>
                 <img src={lens} style={{ width: "1.3vw", height: "1.3vw", alignItems: "center", marginLeft: "15px" }} />
                 <input onChange={(e) => props.setSearch(e.target.value)} placeholder='Search mail' style={{ marginLeft: "3vw", height: "3vw", width: "45vw", backgroundColor: "#E4EFFA", border: "none", outline: "none" }} />
-                <TuneIcon sx={{ color: '#3C3C3C' }} />
+                <TuneIcon style={{width:"2.3vw"}}sx={{ color: '#3C3C3C' }} />
               </div>
             </Grid>
             <Grid item xs={1}>
             <div style={{ display: "flex", alignItems: "center", padding: "10px", marginLeft:"50px" }}>
              
-              <HelpOutlineOutlined sx={{ color: '#3C3C3C', margin: '0 10px' }} />
-              <SettingsOutlined sx={{ color: '#3C3C3C', margin: '0 10px' }} />
-              <AppsOutlined sx={{ color: '#3C3C3C', margin: '0 10px' }} />
+              <HelpOutlineOutlined sx={{ color: '#3C3C3C', margin: '0 0px' }} style={{width:"2.3vw"}} />
+              <SettingsOutlined sx={{ color: '#3C3C3C', margin: '0 10px' }}style={{width:"2.3vw"}} />
+              <AppsOutlined sx={{ color: '#3C3C3C', margin: '0 10px' }} style={{width:"2.3vw"}}/>
             </div>
               <Profile />
             </Grid>

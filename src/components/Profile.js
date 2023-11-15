@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
-  top: '34%',
-  left: '79%',
+  top: '30%',
+  left: '80%',
   transform: 'translate(-50%, -50%)',
   width: "30vw",
   height:"20vw",

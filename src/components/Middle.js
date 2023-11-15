@@ -141,7 +141,7 @@
       fetchData(); // Fetch data when the component mounts
 
       const interval = setInterval(() => {
-        // Fetch data at regular intervals (adjust the interval time as needed)
+        
         fetchData();
       }, 500); // Fetch data every 60 seconds
 

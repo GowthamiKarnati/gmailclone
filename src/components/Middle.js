@@ -280,8 +280,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import star from "../images/star.png";
-  import remove from "../images/bin.png";
-  import yellow from "../images/yellow.png";
+import yellow from "../images/yellow.png";
 const dummyEmails = [
   {
     id: 1,

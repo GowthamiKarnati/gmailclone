@@ -49,11 +49,9 @@ import { Grid } from '@mui/material';
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Leftpanel from './Leftpanel';
-import Middle from './Middle';
+import Middled from './Middled';
 import Rightpanel from './Rightpanel';
 import Footer from './Footer';
-import Sidebar from './Sidebar';
-import menu from "../images/menu.png";
 
 function Main() {
   const [subCollect, setSubCollect] = useState("Inbox");
@@ -78,7 +76,7 @@ function Main() {
           </Grid>
         )}
         <Grid item xs={isLeftPanelVisible ? 9 : 10}>
-          <Middle search={search} subCollect={subCollect} />
+          <Middled search={search} subCollect={subCollect} />
         </Grid>
         <Grid item xs={1}>
           <Rightpanel />

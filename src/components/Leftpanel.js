@@ -9,6 +9,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function Leftpanel(props) {
   const [selectedSection, setSelectedSection] = useState("Inbox");
   const [selectedOption, setSelectedOption] = useState(null);
@@ -139,6 +140,8 @@ function Leftpanel(props) {
       </div>  
 
       <div
+      
+      
         style={{
           marginTop: "1vw",
           marginLeft: "0.8vw",
@@ -149,10 +152,11 @@ function Leftpanel(props) {
         }}
         onClick={handleToggleMoreOptions}
       >
+        <ExpandMoreIcon style={{ width: "1.1vw", marginLeft: "2vw" }}/>
         <span
           style={{
             cursor: "pointer",
-            marginLeft: "1.6vw",
+            marginLeft: "1.8vw",
             fontWeight: "400",
             fontSize: '1.1vw'
           }}
@@ -161,7 +165,7 @@ function Leftpanel(props) {
         </span>
       </div>
 
-      {/* Additional options that appear when "More" is clicked */}
+      
       {showMoreOptions && (
         <>
           <div

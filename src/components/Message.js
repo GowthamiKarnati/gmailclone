@@ -271,7 +271,7 @@ export default function Message() {
   const formattingIconsStyle = {
     position: 'absolute',
     
-    marginTop: expanded ? '34vw' : '17vw',
+    marginTop: expanded ? '32.8vw' : '17vw',
     
     left: expanded ? '1.9vw' : '1vw !important',
     width: expanded?'65vw':'38vw',

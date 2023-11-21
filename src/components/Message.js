@@ -244,7 +244,7 @@ export default function Message() {
   };
 
   const inputStyle = {
-    width: expanded ? "70vw" : "38vw",
+    width: expanded ? "72vw" : "41vw",
     marginTop: "0vw",
   };
 

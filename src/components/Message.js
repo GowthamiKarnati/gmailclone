@@ -201,6 +201,7 @@ import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import FormatIndentDecreaseIcon from '@mui/icons-material/FormatIndentDecrease';
 import FormatIndentIncreaseIcon from '@mui/icons-material/FormatIndentIncrease';
+
 const style = {
   position: 'absolute',
   top: '70%',
@@ -217,6 +218,7 @@ const style = {
 };
 
 export default function Message() {
+  
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [mailId, setMailId] = useState("");
@@ -251,7 +253,7 @@ export default function Message() {
     fontSize: "1vw",
     width: expanded ? "8vw" : "4vw",
     height: "3vw",
-    marginTop: expanded ? "2vw" : "0.5vw",
+    marginTop: expanded ? "0vw" : "0.5vw",
   };
   const buttonContainerStyle = {
     display: 'flex',
@@ -271,7 +273,7 @@ export default function Message() {
     
     marginTop: expanded ? '34vw' : '17vw',
     
-    left: '2.9vw',
+    left: expanded ? '1.9vw' : '1vw !important',
     width: expanded?'65vw':'38vw',
     height:"1.8vw",
     display: 'flex',
@@ -352,7 +354,7 @@ export default function Message() {
         <Box sx={modalStyle}>
           <Typography style={{
             backgroundColor: "#EDF9FF", position: 'absolute',
-            top: "0", left: "0", width: "41vw", padding: "0.5vw", fontSize: "1vw", width: expanded ? "98%" : "41vw",
+            top: "0", left: "0", width: "41vw", padding: "0.5vw", fontSize: "1vw", width: expanded ? "98.5%" : "41vw",
           }} >
             New Message
             {expanded ? (
@@ -369,25 +371,29 @@ export default function Message() {
           <TextField onChange={(e) => setMessage(e.target.value)} multiline rows={0} sx={{ width: "39vw", "& fieldset": { border: "none" } }} />
           {showFormattingIcons && (
           <div style={formattingIconsStyle}>
-            <UndoIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} onClick={handleUndo} />
-            <RedoIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} onClick={handleRedo} />
-            <FormatBoldIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} onClick={handleBold} />
-            <FormatItalicIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} onClick={handleItalic} />
-            <FormatUnderlinedIcon   style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }}onClick={handleUnderline} />
-            <TextFieldsIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} />
-            <FormatAlignLeftIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} />
-            <FormatListNumberedIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} />
-            <FormatListBulletedIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} />
-            <FormatIndentIncreaseIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }}/>
-            <FormatIndentDecreaseIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }}/>
+            <UndoIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} onClick={handleUndo} />
+            <RedoIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} onClick={handleRedo} />
+            <FormatBoldIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} onClick={handleBold} />
+            <FormatItalicIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} onClick={handleItalic} />
+            <FormatUnderlinedIcon   style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }}onClick={handleUnderline} />
+            <TextFieldsIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} />
+            <FormatAlignLeftIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} />
+            <FormatListNumberedIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} />
+            <FormatListBulletedIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }} />
+            <FormatIndentIncreaseIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }}/>
+            <FormatIndentDecreaseIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.6vw' }}/>
             
             {/* Add more icons for other formatting options */}
             <MoreVertIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} onClick={handleFormatClick} />
           </div>
         )}
           <div style={buttonContainerStyle}>
-            <Button onClick={inbox} variant='contained' sx={buttonStyle}>Send</Button>
+          <Button onClick={() => { window.location.href = '/main' }} variant='contained' sx={buttonStyle}>Send</Button>
+
             <FormatColorTextIcon style={{ marginLeft: '1vw' }} onClick={handleFormatClick}/>
+            {/* <Button onClick={handleFormatClick} style={{ marginLeft: '1vw' }}>
+              <FormatColorTextIcon />
+            </Button> */}
             <AttachFileIcon style={{ marginLeft: '0.8vw' }}/>
             <InsertLinkIcon  style={{ marginLeft: '0.8vw' }}/>
             <EmojiEmotionsIcon style={{ marginLeft: '0.8vw' }}/>

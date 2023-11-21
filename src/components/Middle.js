@@ -488,14 +488,23 @@ function Middle(props) {
                           onClick={() => starred(data)}
                         />
                       )}
-                      <span style={{ fontSize: '0.8vw', marginLeft: '1.2vw', fontWeight: '500', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
+                      {/* <span style={{display: 'inline-block',width: '30%',  fontSize: '0.8vw', marginLeft: '1.2vw', fontWeight: '500', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
                         {data.sender}
-                        <span style={{ fontSize: '0.8vw', marginLeft: '5vw', fontWeight: '500', cursor: 'pointer', fontSize: '18' }} onClick={() => handleEmailClick(data)}>
+                        <span style={{ fontSize: '0.8vw',marginLeft:"1vw", fontWeight: '500', cursor: 'pointer', fontSize: '18' }} onClick={() => handleEmailClick(data)}>
                           {data.subject}
                         </span>
                         <span style={{ marginLeft: '2vw', fontWeight: '300', cursor: 'pointer', fontSize: '8' }} onClick={() => handleEmailClick(data)}>
                           {data.email.substring(0, 50)}....
                         </span>
+                      </span> */}
+                      <span style={{ display: 'inline-block', width: '20%', fontSize: '0.8vw', marginLeft: '1.2vw', fontWeight: '500', cursor: 'pointer' }} onClick={() => handleEmailClick(data)}>
+                        {data.sender}
+                      </span>
+                      <span style={{ display: 'inline-block', width: '30%', fontSize: '0.8vw', marginLeft: '1.2vw', fontWeight: '500', cursor: 'pointer' }} onClick={() => handleEmailClick(data)}>
+                        {data.subject}
+                      </span>
+                      <span style={{ display: 'inline-block', width: '50%', fontSize: '0.8vw', marginLeft: '1.2vw', fontWeight: '500', cursor: 'pointer' }} onClick={() => handleEmailClick(data)}>
+                        {data.email.substring(0, 50)}....
                       </span>
                       <div style={{ position: 'absolute', right: '0', top: '0' }}>
                         {showEmailDetail && (

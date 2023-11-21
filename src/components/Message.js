@@ -278,7 +278,7 @@ export default function Message() {
     height:"1.8vw",
     display: 'flex',
     boxShadow: expanded ? '0px 4px 6px rgba(0, 0, 0, 0.1)' : '0px 4px 6px rgba(0, 0, 0, 0.1)',
-    // Adjust this value to align the formatting icons above the buttonContainerStyle
+    
   };
   
   const send = async () => {

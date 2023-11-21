@@ -79,6 +79,15 @@ const dummyEmails = [
   },
   {
     id: 7,
+    sender: 'Michael Starred',
+    subject: 'Exclusive Limited-Time Offer!',
+    email: 'We acknowledge your outstanding contribution and achievement. Well done!',
+    starred: true,
+    snoozed: false,
+    category: 'starred',
+  },
+  {
+    id: 8,
     sender: 'Bob Anderson',
     subject: 'Weekly Report',
     email: 'Sharing the weekly report highlighting key achievements and challenges.',
@@ -86,7 +95,7 @@ const dummyEmails = [
     snoozed: false,
   },
   {
-    id: 8,
+    id: 9,
     sender: 'Eva Williams',
     subject: 'Product Launch',
     email: 'Discussing the upcoming product launch strategy and preparations.',
@@ -94,7 +103,7 @@ const dummyEmails = [
     snoozed: false,
   },
   {
-    id: 9,
+    id: 10,
     sender: 'Charlie Brown',
     subject: 'Team Building Event',
     email: 'Planning a team-building event to enhance collaboration and teamwork.',
@@ -102,7 +111,7 @@ const dummyEmails = [
     snoozed: false,
   },
   {
-    id: 10,
+    id: 11,
     sender: 'Sophie Snoozed',
     subject: 'Weekly Meeting Tomorrow',
     email: 'Just a friendly reminder about our weekly team meeting scheduled for tomorrow.',
@@ -111,7 +120,7 @@ const dummyEmails = [
     category: 'snoozed',
   },
   {
-    id: 11,
+    id: 12,
     sender: 'Alex Snoozed',
     subject: 'Project Deadline Extended',
     email: 'Good news! The deadline for the ongoing project has been extended. Take advantage of the extra time.',
@@ -120,7 +129,7 @@ const dummyEmails = [
     category: 'snoozed',
   },
   {
-    id: 12,
+    id: 13,
     sender: 'Olivia Snoozed',
     subject: 'Upcoming Holiday Break',
     email: 'Plan your tasks accordingly as there will be a holiday break next week. Enjoy your time off!',
@@ -129,7 +138,7 @@ const dummyEmails = [
     category: 'snoozed',
   },
   {
-    id: 13,
+    id: 14,
     sender: 'Reminder Service',
     subject: 'Upcoming Event Reminder',
     email: 'Could you please provide more details or clarify what specific information or assistance.',
@@ -137,7 +146,7 @@ const dummyEmails = [
     category: 'snoozed',
   },
   {
-    id: 14,
+    id: 15,
     sender: 'Task Manager',
     subject: 'Task Deadline Approaching',
     email: 'Your task deadline is approaching. Take a look at the details and make sure you',
@@ -146,7 +155,7 @@ const dummyEmails = [
     category: 'snoozed',
   },
   {
-    id: 15,
+    id: 16,
     sender: 'Leo',
     subject: 'Exciting Opportunity Awaits!',
     email: 'Congratulations! You have been selected for an exciting new opportunity.',
@@ -155,7 +164,7 @@ const dummyEmails = [
     category: 'starred',
   },
   {
-    id: 16,
+    id: 17,
     sender: 'Noah',
     subject: 'Special Invitation: VIP Event',
     email: 'You are invited to an exclusive VIP event with special guests and surprises.',

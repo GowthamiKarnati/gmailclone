@@ -211,6 +211,26 @@ const dummyStarredEmails = [
     category: 'starred',
   },
   
+  {
+    id: 4,
+    sender: 'Alex Snoozed',
+    subject: 'Project Deadline Extended',
+    email: 'Good news! The deadline for the ongoing project has been extended. Take advantage of the extra time.',
+    starred: true,
+    snoozed: true,
+    category: 'snoozed',
+  },
+  {
+    id: 5,
+    sender: 'Birthday Wishes',
+    subject: 'Happy Birthday!',
+    email: 'Wishing you a fantastic birthday celebration! This email will be sent on your birthday.',
+    scheduledTime: '2023-12-15T09:00:00', // Replace with the actual scheduled time
+    starred: true,
+    snoozed: false,
+    category: 'scheduled',
+  },
+  
   
 ];
 const dummySnoozedEmails = [
@@ -341,7 +361,7 @@ function Middled(props) {
               <PlaylistAddCheckIcon style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw' }} />
             </div>
             <h2 style={{ fontWeight: '300', fontSize: '1.5vw' }}>{selectedEmail.subject}</h2>
-            <p>{selectedEmail.email}</p>
+            <p style={{fontSize:'1vw'}} >{selectedEmail.email}</p>
           </div>
         ) : (
           <>

@@ -472,18 +472,18 @@ function Middled(props) {
                       </span>
                       <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                         <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                        {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                        {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                         </span>
                       <div style={{ position: 'absolute', right: '0', top: '0' }}>
                         {showEmailDetail && (
                           <AccessTimeIcon
-                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw', marginTop: '0.5vw' }}
+                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw', marginTop: '0.5vw' }}
                             onClick={() => snoozed(data)}
                           />
                         )}
                         {showEmailDetail && (
                           <DeleteIcon
-                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                             onClick={() => deleteMail(data)}
                           />
                         )}
@@ -564,19 +564,19 @@ function Middled(props) {
                       </span>
                       <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                         <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                        {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                        {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                         </span>
                           
                           <div style={{ position: 'absolute', right: '0', top: '0' }}>
                             {showEmailDetail && (
                               <AccessTimeIcon
-                                style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                 onClick={() => snoozed(data)}
                               />
                             )}
                             {showEmailDetail && (
                               <DeleteIcon
-                                style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                 onClick={() => deleteMail(data)}
                               />
                             )}
@@ -657,19 +657,19 @@ function Middled(props) {
                         </span>
                         <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                           <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                          {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                          {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                           </span>
                             
                             <div style={{ position: 'absolute', right: '0', top: '0' }}>
                               {showEmailDetail && (
                                 <AccessTimeIcon
-                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                   onClick={() => snoozed(data)}
                                 />
                               )}
                               {showEmailDetail && (
                                 <DeleteIcon
-                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                   onClick={() => deleteMail(data)}
                                 />
                               )}
@@ -750,19 +750,19 @@ function Middled(props) {
                         </span>
                         <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                           <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                          {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                          {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                           </span>
                             
                             <div style={{ position: 'absolute', right: '0', top: '0' }}>
                               {showEmailDetail && (
                                 <AccessTimeIcon
-                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1w',  marginTop: '0.5vw' }}
                                   onClick={() => snoozed(data)}
                                 />
                               )}
                               {showEmailDetail && (
                                 <DeleteIcon
-                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                  style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                   onClick={() => deleteMail(data)}
                                 />
                               )}
@@ -843,19 +843,19 @@ function Middled(props) {
                           </span>
                           <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                             <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                            {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                            {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                             </span>
                               
                               <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                 {showEmailDetail && (
                                   <AccessTimeIcon
-                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                     onClick={() => snoozed(data)}
                                   />
                                 )}
                                 {showEmailDetail && (
                                   <DeleteIcon
-                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                     onClick={() => deleteMail(data)}
                                   />
                                 )}
@@ -936,19 +936,19 @@ function Middled(props) {
                           </span>
                           <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                             <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                            {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                            {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                             </span>
                               
                               <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                 {showEmailDetail && (
                                   <AccessTimeIcon
-                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                     onClick={() => snoozed(data)}
                                   />
                                 )}
                                 {showEmailDetail && (
                                   <DeleteIcon
-                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                    style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                     onClick={() => deleteMail(data)}
                                   />
                                 )}
@@ -1029,19 +1029,19 @@ function Middled(props) {
                             </span>
                             <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                               <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                              {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                              {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                               </span>
                                 
                                 <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                   {showEmailDetail && (
                                     <AccessTimeIcon
-                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: 'vw',  marginTop: '0.5vw' }}
                                       onClick={() => snoozed(data)}
                                     />
                                   )}
                                   {showEmailDetail && (
                                     <DeleteIcon
-                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                       onClick={() => deleteMail(data)}
                                     />
                                   )}
@@ -1122,19 +1122,19 @@ function Middled(props) {
                             </span>
                             <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                               <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                              {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                              {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                               </span>
                                 
                                 <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                   {showEmailDetail && (
                                     <AccessTimeIcon
-                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                       onClick={() => snoozed(data)}
                                     />
                                   )}
                                   {showEmailDetail && (
                                     <DeleteIcon
-                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                      style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                       onClick={() => deleteMail(data)}
                                     />
                                   )}
@@ -1196,19 +1196,19 @@ function Middled(props) {
                               </span>
                               <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                                 <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                                {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                                {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                                 </span>
                                   
                                   <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                     {showEmailDetail && (
                                       <AccessTimeIcon
-                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                         onClick={() => snoozed(data)}
                                       />
                                     )}
                                     {showEmailDetail && (
                                       <DeleteIcon
-                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                         onClick={() => deleteMail(data)}
                                       />
                                     )}
@@ -1289,19 +1289,19 @@ function Middled(props) {
                               </span>
                               <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                                 <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                                {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                                {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                                 </span>
                                   
                                   <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                     {showEmailDetail && (
                                       <AccessTimeIcon
-                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                         onClick={() => snoozed(data)}
                                       />
                                     )}
                                     {showEmailDetail && (
                                       <DeleteIcon
-                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                        style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                         onClick={() => deleteMail(data)}
                                       />
                                     )}
@@ -1382,19 +1382,19 @@ function Middled(props) {
                                 </span>
                                 <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                                   <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                                  {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                                  {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                                   </span>
                                     
                                     <div style={{ position: 'absolute', right: '0', top: '0' }}>
                                       {showEmailDetail && (
                                         <AccessTimeIcon
-                                          style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                          style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                           onClick={() => snoozed(data)}
                                         />
                                       )}
                                       {showEmailDetail && (
                                         <DeleteIcon
-                                          style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                                          style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                                           onClick={() => deleteMail(data)}
                                         />
                                       )}
@@ -1473,19 +1473,19 @@ function Middled(props) {
                       </span>
                       <span style={{marginLeft:"0.5vw", fontWeight:'lighter'}}>-</span>
                         <span style={{ marginLeft: '0.5vw', fontWeight: '300', cursor: 'pointer', fontSize: '1vw' }} onClick={() => handleEmailClick(data)}>
-                        {data.email.length > 70 ? data.email.substring(0, 70) + '...' : data.email}
+                        {data.email.length > 80 ? data.email.substring(0, 80) + '...' : data.email}
                         </span>
                       
                       <div style={{ position: 'absolute', right: '0', top: '0' }}>
                         {showEmailDetail && (
                           <AccessTimeIcon
-                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                             onClick={() => snoozed(data)}
                           />
                         )}
                         {showEmailDetail && (
                           <DeleteIcon
-                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1.8vw',  marginTop: '0.5vw' }}
+                            style={{ cursor: 'pointer', fontSize: '1.3vw', marginLeft: '1vw',  marginTop: '0.5vw' }}
                             onClick={() => deleteMail(data)}
                           />
                         )}
